@@ -171,9 +171,9 @@ public class AddRegistration extends javax.swing.JInternalFrame {
         jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 1140, 400));
 
         jLabel2.setFont(new java.awt.Font("Rockwell Condensed", 1, 14)); // NOI18N
-        jLabel2.setText("Insert Name :");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, 90, 30));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 502, 1050, 30));
+        jLabel2.setText("Insert Number :");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, 110, 30));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 502, 1040, 30));
 
         jButton2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
         jButton2.setText("REGISTER");
@@ -229,12 +229,6 @@ public class AddRegistration extends javax.swing.JInternalFrame {
                 loadDataToTable();
                 
                 JOptionPane.showMessageDialog(this, "Registration Successfully");
-                
-//                EndRegister er = new EndRegister();
-//                er.setVisible(true);
-//                er.pack();
-//                er.setLocationRelativeTo(null);
-//                er.setDefaultCloseOperation(EndRegister.EXIT_ON_CLOSE);
             }
 
         } catch (NumberFormatException e) {
