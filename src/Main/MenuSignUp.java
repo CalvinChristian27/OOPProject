@@ -65,36 +65,36 @@ public class MenuSignUp extends javax.swing.JInternalFrame {
 
         jLabel1.setForeground(new java.awt.Color(153, 153, 153));
         jLabel1.setText("Username");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 70, 20));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, 70, 20));
 
         jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTextField1MouseClicked(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 210, -1));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 210, -1));
 
         jLabel2.setForeground(new java.awt.Color(153, 153, 153));
         jLabel2.setText("Password");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 60, 20));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 60, 20));
 
         jPasswordField1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPasswordField1MouseClicked(evt);
             }
         });
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 210, -1));
+        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 100, 210, -1));
 
         jLabel3.setForeground(new java.awt.Color(153, 153, 153));
         jLabel3.setText("Confirm Password");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 110, 20));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, 110, 20));
 
         jPasswordField2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jPasswordField2MouseClicked(evt);
             }
         });
-        jPanel1.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 210, -1));
+        jPanel1.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, 210, -1));
 
         jButton1.setBackground(new java.awt.Color(51, 204, 255));
         jButton1.setFont(new java.awt.Font("Gloucester MT Extra Condensed", 0, 18)); // NOI18N
@@ -105,14 +105,14 @@ public class MenuSignUp extends javax.swing.JInternalFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 200, 210, 30));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 210, 30));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 0, 0));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 205, 20));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 330, 300));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 260));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

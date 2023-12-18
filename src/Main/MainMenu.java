@@ -8,7 +8,8 @@ public class MainMenu extends javax.swing.JFrame {
         initComponents();
         jPanel4.setVisible(false);
         jPanel6.setVisible(false);
-        MenuLogin1.setVisible(true);
+        MenuLogin ml = new MenuLogin();
+        jDesktopPane1.add(ml).setVisible(true);
     }
     
     public void SignInOption(){
@@ -17,9 +18,7 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel4.setVisible(true);
         jLabel7.setForeground(new java.awt.Color(51,204,255));
         jPanel5.setVisible(false);
-        jPanel6.setVisible(true);
-        menuSignUp1.setVisible(true);
-        MenuLogin1.setVisible(false);
+        jPanel6.setVisible(true);        
     }
 
     public void SignUpOption(){
@@ -29,8 +28,6 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel7.setForeground(Color.black);
         jPanel6.setVisible(false);
         jPanel5.setVisible(true);
-        MenuLogin1.setVisible(true);
-        menuSignUp1.setVisible(false);
     }
     
     @SuppressWarnings("unchecked")
@@ -50,15 +47,14 @@ public class MainMenu extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
         jDesktopPane1 = new javax.swing.JDesktopPane();
-        MenuLogin1 = new Main.MenuLogin();
-        menuSignUp1 = new Main.MenuSignUp();
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -163,52 +159,6 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setFont(new java.awt.Font("Stencil", 0, 18)); // NOI18N
-        jLabel7.setText("SIGN UP");
-        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel7MouseClicked(evt);
-            }
-        });
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 32, -1, 20));
-
-        jPanel4.setBackground(new java.awt.Color(51, 204, 255));
-        jPanel4.setForeground(new java.awt.Color(0, 153, 255));
-        jPanel4.setPreferredSize(new java.awt.Dimension(45, 5));
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 55, 30, -1));
-
-        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
-        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel5MouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 166, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 80, Short.MAX_VALUE)
-        );
-
-        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 0, 176, 90));
-
         jLabel2.setFont(new java.awt.Font("Stencil", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 204, 255));
         jLabel2.setText("SIGN IN");
@@ -222,6 +172,11 @@ public class MainMenu extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(51, 204, 255));
         jPanel3.setForeground(new java.awt.Color(0, 153, 255));
         jPanel3.setPreferredSize(new java.awt.Dimension(45, 5));
+        jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel3MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -256,15 +211,84 @@ public class MainMenu extends javax.swing.JFrame {
 
         jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 176, 90));
 
-        jDesktopPane1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel4.setBackground(new java.awt.Color(51, 204, 255));
+        jPanel4.setForeground(new java.awt.Color(0, 153, 255));
+        jPanel4.setPreferredSize(new java.awt.Dimension(45, 5));
+        jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel4MouseClicked(evt);
+            }
+        });
 
-        MenuLogin1.setVisible(true);
-        jDesktopPane1.add(MenuLogin1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, -40, 350, 320));
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 30, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
-        menuSignUp1.setVisible(true);
-        jDesktopPane1.add(menuSignUp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-5, -30, 340, 320));
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 55, 30, -1));
 
-        jPanel2.add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 330, 260));
+        jLabel7.setFont(new java.awt.Font("Stencil", 0, 18)); // NOI18N
+        jLabel7.setText("SIGN UP");
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(224, 32, -1, 20));
+
+        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+        jPanel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel5MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 166, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 80, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 0, 176, 90));
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 340, Short.MAX_VALUE)
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 130, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 5, 340, 130));
+
+        jDesktopPane1.setBackground(new java.awt.Color(242, 242, 242));
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 340, Short.MAX_VALUE)
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 268, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(jDesktopPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 87, 340, 268));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 160, 350, 360));
 
@@ -288,10 +312,16 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         SignInOption();
+        jDesktopPane1.removeAll();
+        MenuSignUp ms = new MenuSignUp();
+        jDesktopPane1.add(ms).setVisible(true);
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         SignUpOption();
+        jDesktopPane1.removeAll();
+        MenuLogin ml = new MenuLogin();
+        jDesktopPane1.add(ml).setVisible(true);
     }//GEN-LAST:event_jLabel2MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -306,11 +336,31 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void jPanel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel6MouseClicked
         SignUpOption();
+        jDesktopPane1.removeAll();
+        MenuLogin ml = new MenuLogin();
+        jDesktopPane1.add(ml).setVisible(true);
     }//GEN-LAST:event_jPanel6MouseClicked
 
     private void jPanel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel5MouseClicked
         SignInOption();
+        jDesktopPane1.removeAll();
+        MenuSignUp ms = new MenuSignUp();
+        jDesktopPane1.add(ms).setVisible(true);
     }//GEN-LAST:event_jPanel5MouseClicked
+
+    private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
+        SignInOption();
+        jDesktopPane1.removeAll();
+        MenuSignUp ms = new MenuSignUp();
+        jDesktopPane1.add(ms).setVisible(true);
+    }//GEN-LAST:event_jPanel4MouseClicked
+
+    private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
+        SignUpOption();
+        jDesktopPane1.removeAll();
+        MenuLogin ml = new MenuLogin();
+        jDesktopPane1.add(ml).setVisible(true);
+    }//GEN-LAST:event_jPanel3MouseClicked
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -345,9 +395,9 @@ public class MainMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private Main.MenuLogin MenuLogin1;
     private javax.swing.JButton jButton1;
     private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JDesktopPane jDesktopPane2;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JDialog jDialog2;
     private javax.swing.JFrame jFrame1;
@@ -368,6 +418,6 @@ public class MainMenu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private Main.MenuSignUp menuSignUp1;
+    private javax.swing.JPanel jPanel7;
     // End of variables declaration//GEN-END:variables
 }

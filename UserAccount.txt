@@ -1,2 +1,1 @@
-daniel:2468
-calvin:123
+user:123
