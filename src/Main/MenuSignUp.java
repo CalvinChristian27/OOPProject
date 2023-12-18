@@ -29,7 +29,6 @@ public class MenuSignUp extends javax.swing.JInternalFrame {
                 }
             }
         } catch (IOException e) {
-            // Handle the exception as needed
         }
     }
     
@@ -40,7 +39,6 @@ public class MenuSignUp extends javax.swing.JInternalFrame {
                 writer.newLine();
             }
         } catch (IOException e) {
-            // Handle the exception as needed
         }
     }
 

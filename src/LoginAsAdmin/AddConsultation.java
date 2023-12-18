@@ -33,13 +33,13 @@ public class AddConsultation extends javax.swing.JInternalFrame {
             String line;
             while ((line = reader.readLine()) != null) {
                 if (isDuplicateRegistration(line, newRegistration)) {
-                    return false; // Registrasi sudah ada
+                    return false;
                 }
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return true; // Registrasi tersedia
+        return true; 
     }
     
     private static void addRegistration(String newRegistration) {
@@ -64,7 +64,6 @@ public class AddConsultation extends javax.swing.JInternalFrame {
         String[] existingData = existingRegistration.split(",");
         String[] newData = newRegistration.split(",");
         
-        // Memeriksa nama dokter, spesialis, tanggal, dan waktu
         return existingData[0].equals(newData[0]) &&
                existingData[1].equals(newData[1]) &&
                existingData[2].equals(newData[2]) &&
